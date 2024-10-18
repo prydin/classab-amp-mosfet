@@ -1,4 +1,4 @@
-# 50W Class AB Amplififier
+# 50W Class AB MOSFET Amplififier
 
 ![3D rendering](images/3d.png)
 
