@@ -5,22 +5,21 @@
 	(uuid "5ab529a0-3114-4987-9e81-df8dc6eb7dbb")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Screw_Terminal_01x03"
-			(pin_names
-				(offset 1.016) hide)
+		(symbol "CustomSymbols:Spade_Connector"
+			(pin_numbers hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at 0 5.08 0)
+				(at 0 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Screw_Terminal_01x03"
-				(at 0 -5.08 0)
+			(property "Value" ""
+				(at -5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -28,7 +27,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at -5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -36,8 +35,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
+			(property "Datasheet" ""
+				(at -5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -45,8 +44,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
+			(property "Description" ""
+				(at -5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -54,113 +53,23 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "screw terminal"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TerminalBlock*:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Screw_Terminal_01x03_1_1"
+			(symbol "Spade_Connector_0_1"
 				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -3.81)
+					(start -2.54 0)
+					(end 0 -5.08)
 					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(circle
-					(center 0 -2.54)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
+						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
-					)
+				(rectangle
+					(start 0 -1.27)
+					(end 3.81 -3.81)
 					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 2.8702) (xy 0.3302 2.032)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 0.508) (xy 0.508 -0.3302)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 3.048) (xy 0.508 2.2098)
-					)
-					(stroke
-						(width 0.1524)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -168,31 +77,22 @@
 					)
 				)
 				(circle
-					(center 0 0)
+					(center 2.54 -2.54)
 					(radius 0.635)
 					(stroke
-						(width 0.1524)
+						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(circle
-					(center 0 2.54)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			)
+			(symbol "Spade_Connector_1_1"
 				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
+					(at -5.08 -1.27 0)
+					(length 2.54)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -208,9 +108,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
+					(at -5.08 -3.81 0)
+					(length 2.54)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -218,24 +118,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -963,6 +845,18 @@
 		(uuid "634e2127-7e4b-46f1-8318-a8423c5a9db2")
 	)
 	(junction
+		(at 156.21 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "65411920-3940-4a65-b1bf-1cd7516db27a")
+	)
+	(junction
+		(at 60.96 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9ec0279a-c002-4649-9ca6-8fad71345a09")
+	)
+	(junction
 		(at 72.39 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -975,6 +869,18 @@
 		(uuid "a56ad983-6228-4079-b86a-f27a6acd8298")
 	)
 	(junction
+		(at 49.53 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "afabc499-aa58-483d-8468-329eae7dacff")
+	)
+	(junction
+		(at 156.21 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b72c1f13-9e33-46bc-8263-28745174eb92")
+	)
+	(junction
 		(at 144.78 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -985,6 +891,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cc72daff-1368-48db-b13d-7f15e63c9876")
+	)
+	(junction
+		(at 156.21 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d147b65d-7920-4d88-8727-63dae727f647")
 	)
 	(junction
 		(at 85.09 118.11)
@@ -1017,10 +929,26 @@
 		(uuid "eea0252d-6d65-42b3-85f1-223f9b081c33")
 	)
 	(junction
+		(at 38.1 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f354b05f-c138-4857-ab85-32c396068ef9")
+	)
+	(junction
 		(at 130.81 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f98c6720-20c6-476a-8621-65baaf6c55db")
+	)
+	(wire
+		(pts
+			(xy 35.56 123.19) (xy 38.1 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "094ff13a-f99a-490b-a145-d950b92b75c3")
 	)
 	(wire
 		(pts
@@ -1044,16 +972,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 118.11) (xy 85.09 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c9d453a-0b31-4edd-a030-a5729f1d13a0")
-	)
-	(wire
-		(pts
 			(xy 99.06 116.84) (xy 99.06 120.65)
 		)
 		(stroke
@@ -1071,6 +989,16 @@
 			(type default)
 		)
 		(uuid "1fd49f01-e248-41b6-9aac-c62c79b071c1")
+	)
+	(wire
+		(pts
+			(xy 60.96 118.11) (xy 85.09 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ace5378-fc4c-4067-845e-8815de49c326")
 	)
 	(wire
 		(pts
@@ -1094,7 +1022,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 105.41) (xy 158.75 105.41)
+			(xy 144.78 105.41) (xy 156.21 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1114,6 +1042,36 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 120.65) (xy 49.53 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38fb8dda-4ef8-4bcd-ba63-7f576c858b37")
+	)
+	(wire
+		(pts
+			(xy 156.21 135.89) (xy 158.75 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c31b3b3-07b7-4010-b0b4-9ccc9b5d3add")
+	)
+	(wire
+		(pts
+			(xy 156.21 120.65) (xy 158.75 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d117f00-f3c2-441e-8e32-15965539d890")
+	)
+	(wire
+		(pts
 			(xy 152.4 120.65) (xy 152.4 124.46)
 		)
 		(stroke
@@ -1121,6 +1079,16 @@
 			(type default)
 		)
 		(uuid "41b718ee-9c38-4b26-8317-27dda32ab652")
+	)
+	(wire
+		(pts
+			(xy 156.21 105.41) (xy 158.75 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4480e5b7-c427-40f4-959a-6eafa5c772bf")
 	)
 	(wire
 		(pts
@@ -1164,36 +1132,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 123.19) (xy 72.39 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49dd4446-6d7d-4dd5-bad1-9eb900c1698d")
-	)
-	(wire
-		(pts
-			(xy 158.75 123.19) (xy 158.75 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b9fa808-08d8-4283-b46a-b11542c79db7")
-	)
-	(wire
-		(pts
-			(xy 158.75 105.41) (xy 158.75 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c9b11de-b811-41ad-8baf-68c1a0439008")
-	)
-	(wire
-		(pts
 			(xy 85.09 105.41) (xy 99.06 105.41)
 		)
 		(stroke
@@ -1234,23 +1172,13 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 120.65) (xy 158.75 120.65)
+			(xy 152.4 120.65) (xy 156.21 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "78e15af4-74de-4144-804f-c6fe27105465")
-	)
-	(wire
-		(pts
-			(xy 64.77 120.65) (xy 99.06 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "78fdd556-c7af-4bef-814d-21d33c959ab8")
 	)
 	(wire
 		(pts
@@ -1294,7 +1222,17 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 135.89) (xy 158.75 135.89)
+			(xy 58.42 118.11) (xy 60.96 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1f2e634-54d5-46eb-a7f0-f831f25e8156")
+	)
+	(wire
+		(pts
+			(xy 144.78 135.89) (xy 156.21 135.89)
 		)
 		(stroke
 			(width 0)
@@ -1331,6 +1269,16 @@
 			(type default)
 		)
 		(uuid "b8b65051-4504-46e6-bb6b-37d8d189d8aa")
+	)
+	(wire
+		(pts
+			(xy 49.53 120.65) (xy 99.06 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf20ddfc-a769-4b26-93ca-69f3acecd2bd")
 	)
 	(wire
 		(pts
@@ -1441,6 +1389,16 @@
 			(type default)
 		)
 		(uuid "e1e63378-005f-4a22-a5b4-6644665e6572")
+	)
+	(wire
+		(pts
+			(xy 38.1 123.19) (xy 72.39 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eab3d0a2-fd9c-4e49-ad02-c9d5cea8f459")
 	)
 	(wire
 		(pts
@@ -1791,6 +1749,76 @@
 		)
 	)
 	(symbol
+		(lib_id "CustomSymbols:Spade_Connector")
+		(at 154.94 130.81 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4122d909-2d8b-473f-8a2a-75c8a9fc5464")
+		(property "Reference" "J5"
+			(at 161.29 129.5399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "V-"
+			(at 161.29 131.445 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom:Spade Connector"
+			(at 154.94 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4caeac66-1f14-44e5-b6e3-16206c526cc9")
+		)
+		(pin "1"
+			(uuid "71683032-8fda-417d-8a91-1db9f216a182")
+		)
+		(instances
+			(project "power_supply"
+				(path "/5ab529a0-3114-4987-9e81-df8dc6eb7dbb"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 99.06 128.27 0)
 		(unit 1)
@@ -1931,42 +1959,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x03")
-		(at 59.69 120.65 180)
+		(lib_id "CustomSymbols:Spade_Connector")
+		(at 57.15 113.03 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "584b5977-76d8-470c-81a9-a43d4051acaf")
+		(uuid "6304dc39-aece-4c66-8337-73db84bb6860")
 		(property "Reference" "J1"
-			(at 59.69 111.76 0)
+			(at 63.5 111.7599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "AC IN"
-			(at 59.69 114.3 0)
+		(property "Value" "AC1"
+			(at 63.5 113.665 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal"
-			(at 59.69 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 59.69 120.65 0)
+		(property "Footprint" "Custom:Spade Connector"
+			(at 57.15 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1974,8 +1995,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 59.69 120.65 0)
+		(property "Datasheet" ""
+			(at 57.15 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 57.15 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1984,18 +2014,85 @@
 			)
 		)
 		(pin "2"
-			(uuid "1cff9517-e7e3-4e42-b876-e438eab46755")
-		)
-		(pin "3"
-			(uuid "7e49e046-8589-479f-a143-9c6977a89769")
+			(uuid "642216ce-5330-47f6-a12b-aa7e1002197a")
 		)
 		(pin "1"
-			(uuid "82a97926-5e48-4af9-a476-4a7f904a280a")
+			(uuid "744161df-960c-44ad-9d07-eef6d25996e0")
 		)
 		(instances
 			(project ""
 				(path "/5ab529a0-3114-4987-9e81-df8dc6eb7dbb"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CustomSymbols:Spade_Connector")
+		(at 34.29 118.11 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b149522-57eb-4d9b-9bc4-98ca5409c1b4")
+		(property "Reference" "J4"
+			(at 40.64 116.8399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "AC2"
+			(at 40.64 118.745 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom:Spade Connector"
+			(at 34.29 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 34.29 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3aee9406-f10b-48d9-9c8b-ab724701bf21")
+		)
+		(pin "2"
+			(uuid "d0264a18-7f69-4673-89e8-f0ad6ffc0812")
+		)
+		(instances
+			(project ""
+				(path "/5ab529a0-3114-4987-9e81-df8dc6eb7dbb"
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -2066,6 +2163,146 @@
 			(project "power_supply"
 				(path "/5ab529a0-3114-4987-9e81-df8dc6eb7dbb"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CustomSymbols:Spade_Connector")
+		(at 154.94 100.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c4d32cb-cedf-471f-bddb-5dd55b06918d")
+		(property "Reference" "J6"
+			(at 161.29 99.0599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "V+"
+			(at 161.29 100.965 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom:Spade Connector"
+			(at 154.94 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d53b23bd-7dfd-44fe-9081-49476ab0c2ce")
+		)
+		(pin "1"
+			(uuid "d3adbb85-9bd3-4818-ab7d-301084d38572")
+		)
+		(instances
+			(project "power_supply"
+				(path "/5ab529a0-3114-4987-9e81-df8dc6eb7dbb"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CustomSymbols:Spade_Connector")
+		(at 154.94 115.57 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "96f54c27-709d-414d-9c3d-d28834789523")
+		(property "Reference" "J2"
+			(at 161.29 114.2999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "GND"
+			(at 161.29 116.205 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Custom:Spade Connector"
+			(at 154.94 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a70bd111-8bd9-4b78-8ae2-aee00e4c5bf8")
+		)
+		(pin "1"
+			(uuid "37180811-f757-4fea-b301-7d70d1a0bb3d")
+		)
+		(instances
+			(project "power_supply"
+				(path "/5ab529a0-3114-4987-9e81-df8dc6eb7dbb"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -2458,42 +2695,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x03")
-		(at 163.83 120.65 0)
-		(mirror x)
+		(lib_id "CustomSymbols:Spade_Connector")
+		(at 45.72 115.57 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "da7451f4-cfcc-4bc4-b250-611d339e336a")
-		(property "Reference" "J2"
-			(at 163.83 111.76 0)
+		(fields_autoplaced yes)
+		(uuid "ef3d2deb-5baf-4d03-9410-015d13028d6c")
+		(property "Reference" "J3"
+			(at 52.07 114.2999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "DC OUT"
-			(at 163.83 114.3 0)
+		(property "Value" "CT"
+			(at 52.07 116.205 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal"
-			(at 163.83 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 163.83 120.65 0)
+		(property "Footprint" "Custom:Spade Connector"
+			(at 45.72 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2501,8 +2731,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 163.83 120.65 0)
+		(property "Datasheet" ""
+			(at 45.72 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2511,18 +2750,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "6884a28f-d68c-47bd-8028-39185834cafb")
-		)
-		(pin "3"
-			(uuid "2732a5e9-b3f5-48c8-94c9-33313a7df8e6")
+			(uuid "2e0616ff-b733-4a82-ac8b-384b31dc4d98")
 		)
 		(pin "1"
-			(uuid "2740c9bb-e7ff-4991-9145-af6200876777")
+			(uuid "32bfd869-6871-41fb-9707-d68b86c2666f")
 		)
 		(instances
-			(project "power_supply"
+			(project ""
 				(path "/5ab529a0-3114-4987-9e81-df8dc6eb7dbb"
-					(reference "J2")
+					(reference "J3")
 					(unit 1)
 				)
 			)
