@@ -160,26 +160,26 @@ the listening experience.
 ![Bode plot](images/bode.png)
 
 # Bill of materials
-| Reference | Value | Vendor | Footprint | Qty | URL | 
-| --------- | ----- | ------ | --------- | --- | --- |
-| C1 | 33uF | Panasonic. Non-polarized | Radial_D4.0mm_P2.00mm | 1 | 
-| C2,C5 | 100pF | Generic | Rect_L7.2mm_W3.0mm_P5.00mm | 2 | |
-| C3,C15,C16 | 100n | TDK | Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2 | 3 | https://www.mouser.com/ProductDetail/871-B32529C1104J |
 
+All capacitor voltages are 50V and all resistor power ratings are 1/4W unless otherwise indicated. 
 
-"C4","220u","~","Capacitor_THT:CP_Radial_D8.0mm_P5.00mm","1",""
-"C6,L1","10u","~","-- mixed values --","2",""
-"C7","10n","~","Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2","1",""
-"C13,C14","4700u","~","Capacitor_THT:CP_Radial_D18.0mm_P7.50mm","2",""
-"D4,D5","1N4148","https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf","Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal","2",""
-"D6,D11","1N5919","~","Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal","2",""
-"D7,D8,D9,D10","1N4004","http://www.vishay.com/docs/88503/1n4001.pdf","Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal","4",""
-"J1","SPEAKER","~","TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal","1",""
-"J2,J4,J5","~","","footprints:Spade Connector","3",""
-"J3","INPUT","~","TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal","1",""
-"Q1,Q2,Q11,Q12,Q15","2N5551","https://www.onsemi.com/pub/Collateral/2N3903-D.PDF","Package_TO_SOT_THT:TO-92_Wide","5",""
-"Q3,Q4,Q16","2N5401","https://www.onsemi.com/pub/Collateral/2N3906-D.PDF","Package_TO_SOT_THT:TO-92_Wide","3",""
-"Q6","BD140","http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf","Package_TO_SOT_THT:TO-126-3_Vertical","1",""
+| Reference | Value | Footprint | Qty | Vendor| Part No | 
+| --------- | ----- | --------- | ----| ----- | ------- |
+| C1 | 33uF | Radial_D4.0mm_P2.00mm | 1 | Generic | | 
+| C2,C5 | 100pF | Rect_L7.2mm_W3.0mm_P5.00mm | 2 | Generic | |
+| C4 | 220uF | Radial_D8.0mm_P5.00mm | 1 | Mouser | 871-B32529C1104J |
+| C6 | 10uF | CRadial_D4.0mm_P2.00mm | Generic | |
+| C7 | 10nF | Rect_L7.2mm_W3.0mm_P5.00mm | 1 | Generic | |
+| C13,C14 | 4700uF | CP_Radial_D18.0mm_P7.50mm | 8 | Mouser | 232-50PK4700MEFC18X4 | 
+| D4,D5 | 1N4148 | DO-35_SOD27_P7.62mm_Horizontal | 2 | Mouser | 512-1N4148 |
+| D6,D11 | 1N5919 |DO-41_SOD81_P10.16mm_Horizontal | 2 | Mouser | 863-1N5919BRLG |
+| D7,D8,D9,D10 | 1N4004 | DO-41_SOD81_P10.16mm_Horizontal | 4 | Mouser | 637-1N4004 | 
+| J1 | Terminal Block | TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal | 1 | Generic |
+| J2,J4,J5 | Spade connector, male | Pitch 5.08mm, hole 1.4mm | 3 | Generic | |
+| J3 | Terminal Block | TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal | 1 | Generic | |
+| Q1,Q2,Q11,Q12,Q15 | 2N5551 | TO-92_Wide | 5 | Mouser | 583-2N5551-T |
+| Q3,Q4,Q16 | 2N5401 | TO-92_Wide | 3 | Mouser | 583-2N5401-F |
+| Q6 | BD140 | TO-126-3_Vertical | 1 | Nouser | 511-BD140-16 |
 "Q7,Q8","BD139","http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf","Package_TO_SOT_THT:TO-126-3_Vertical","2",""
 "Q9","IRFP240","https://www.infineon.com/dgdl/irfp4468pbf.pdf?fileId=5546d462533600a40153562c73472019","Package_TO_SOT_THT:TO-247-3_Vertical","1",""
 "Q10","IRFP9240","http://www.irf.com/product-info/datasheets/data/irf9540n.pdf","Package_TO_SOT_THT:TO-247-3_Vertical","1",""
