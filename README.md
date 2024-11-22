@@ -8,35 +8,32 @@ and this is my first "serious" attempt at amplifier design. I invite you to buil
 perform like a professionally designed high-end amplifier. That said, I think it sounds pretty darn good. 
 
 ## Background
-This is my take on a classic Class AB amplifier. I did it for two reasons: I wanted to learn how to design and build a Class AB amplifier and
-I needed better sound than crappy Bluetooth speakers in my office. I settled for 50W because that's all the power I need for my application
-and the voltages involved are a lot more forgiving than what you'd have with a 300W monster. 
-
-Some people have said it looks a lot like Doug Self's "Blameless Amplifier". I take that as a compliment, but the fact is that I didn't even
-know how Self was when I started building it. The design is just based on various ideas from other amplifiers that I put together and tried to
-make it my own.
+This is an updated version of the bipolar Class AB amplifier I designed a while ago that can be found here: https://github.com/prydin/classab-amp-mosfet
+I tried to correct some of the mistakes (mostly in the PCB design) and I also wanted to try use MOSFETs for the output stage. I settled on the 
+tried and tested IRFP240/9240 combination. Although not marketed as audio transistors, these devices have found their way into countless amplifier 
+designs, perhaps most notably some of Nelson Pass' First Watt creations. I really like the way they're performing. They seem to run a lot cooler
+at the same quiescent current compared to their BJT counterparts. I'm also seeing less distortion and mostly concentrated on the second harmonic.
 
 ## Repository structure
 * `kicad` - Schematic and PCB layout in KiCAD format
 *  `spice` - LTSpice simulations
 
 ## Overall design
-The design is a simple single differential stage amplifier with a single transistor VAS driving two Darlington pairs for the final current 
-gain stage. 
+The design is a simple single differential stage amplifier with a single ended, two transistor emitter coupled VAS driving two complementary
+MOSFETs on the output.
 
 ### Input stage
 After the customary DC-blocking capacitor and RF filter, the signal is fed into a long tailed pair differential amplifier that's enhanced to 
 an active current sink and current mirror loads. The active sink and load helps improve both distortion and frequency response. The bias 
-current of the LTP is set to approximately 600uA. The LTP and its current mirrors are mounted on a separate copper island for maximum heat
-condudctivity between the transistors. The feedback is fed through a 22k/1k voltage divider, yielding about 23x amplification. This is a 
+current of the LTP is set to approximately 1.5mA. The LTP and its current mirrors are mounted on a separate copper island for maximum heat
+condudctivity between the transistors. The feedback is fed through a 22k/1k voltage divider, yielding about 23x (27dB) gain. This is a 
 conservative estimate and may have to be adjusted when testing the physical build. The active current sink and load seem to offer a robust
 power supply rejection. 
 
 ### Voltage amplification/drive stage
 I went for a very simple single-sided design here. I've gotten many suggestions that I should try a dual differential design instead, but 
-the current design seems good enough, so I stuck with it. The VAS has a 47p compensation capacitor which appears to be enough to provide 
-ample phase margin. After some testing, I also found that a 4.7nF Miller capacitance on the VAS current sink greatly helped to maintain 
-stability.
+the current design seems good enough, so I stuck with it. The VAS has a 220pF compensation capacitor which appears to be enough to provide 
+ample phase margin. 
 
 ### Output stage biasing
 The output stage is biased using a servo transistor driven by a constant current sink. The BD139 for the servo as chosen just because it's
@@ -44,14 +41,12 @@ easy to mount on a heat sink together with the power components for good heat co
 transistor works too, but would have been harder to attach to the heat sink.
 
 ### Output stage
-Here I am using some very common components. BD139/BD140 transistors as the first stage of the Darlington pair and MJL3281/MLJ1302 for
-the final stage. The final transistors can handle 200W, so they are definitely a bit overkill. However, they performed better than
-TIP35/TIP36 in the simulator and headroom is never a bad thing to have. Before the signal reaches the speaker, it is passed through
-a snubber and a Zobel network to further improve stability.
+The output stage consists of a complementary pair made up of IRFP240/9240 MOSFETs with a 330ohm gate resistor. 
+Before the signal reaches the speaker, it is passed througha snubber and an inductor to further improve stability.
 
 ### Short circuit projection 
-To protect against short circuits, overcurrent and catastrophic DC output, two transistors are fitted that measure the curremt across
-the degeneration resistors and shut off the base current to the final Darlington stage when the current reaches approximately 4A. 
+Rather than the "base current thief" arrangement in the BJT version, I'm solely relying on a pair of zener diodes to keep the 
+gate voltage about 5V above or below the source voltage. This limits the power to about 50W and results in fairly soft clipping. 
 
 ### Output coil
 The output coil is realized simply by winding 10-12 turns of 16 AWG wire around R21. See the photo below!
@@ -59,43 +54,36 @@ The output coil is realized simply by winding 10-12 turns of 16 AWG wire around 
 
 ### Power improvements
 Altough this hasn't been tested or thorouhgly analyzed, it should be possible to increase the rail voltages to +-40V, which yields about
-160W according to simultions. For this to work, the gain needs to be made higher by increasing the value of the feedback resistor. The
-voltage divider for the short circuit protection also needs to be adjusted to allow more curent. Finally, the biasing may need to be adjusted
-as well. 
-
-### Stability
-The amplifier is very stable in simulations, but my original design suffered from some 800-900kHz 200mV p/p oscillations at idle. After 
-some troubleshooting, it turned out that the bias circuitry had some local stability issues. To remedy this, a 4.7nF Miller capacitance was
-added to Q8. I also found that a larger capacitance (~50nF) across collector and emitter on Q8 helped with stability. The CE capacitance was
-later omitted due to bandwidth concerns. 
+160W according to simultions. For this to work, the gain needs to be made higher by increasing the value of the feedback resistor. The voltage 
+limiting zener diodes on the gates also have to be adjusted.
 
 ### Power supply
 The amplifier is intended to be powered by an unregulated linear power supply like the one supplied in this repository. Each amplifier board
-is fitted with 4700uF on each rail, per channel and the rectifier board has an additional 4700uF on each rail. In simulations, measurements 
-and listening tests, this seems sufficient. However, the rectifier board has room for two additional capacitors if so desired.
+is fitted with 4700uF on each rail, per channel and the rectifier board has an additional 9400uF on each rail. In simulations, measurements 
+and listening tests, this seems sufficient. 
 
-In my build, I'm using a 2x25V toroidial transformer. Where I live, this ended up giving me 2x39V rectified voltage, which is a bit more
-than I would have liked, especially since it puts the BC547/557 very close to their CE voltage limit. So I would recommend you either go 
-with a slightly lower voltage or swap the transistors in the differential stage to 2N5551/5401 or something simiar. 
+In my build, I'm using a 2x25V toroidial transformer. Where I live, this ended up giving me 2x39V rectified voltage, which is a bit overkill for
+50W, but some extra headroom is never a bad thing.
 
 ### PCB Design
 I am *NOT* an expert at PCB design. In fact, I'm very much a novice and not very good at it, so the PCB layout is probably somewhat naive. 
-I settled for a ground plane and laterally adjacent power planes rather than star ground. That said, with proper ground wiring, there is 
-no audible hiss or hum. If you have ideas on how to improve the PCB design (or the overall design), feel free to fork and issue a pull
-request. I'll take any help I can get.
+In this design, I tried to create a star arrangement for the power ground. The power ground is loosely connected to the signal ground through 
+a 100ohm resistor and to the chassis through a 220ohm resistor and a 10nF capacitor. This is slightly different from the prototype that I 
+originally built, so you may have to tweak this if you experience hum. The prototype I'm currently using in my livingroom has no audible hum.
 
 # Build and bring-up
 
 ## Mechanincal design
-Mechnical design is not my forte, so you're probably best off to come up with your own design here. I went with a 12' x 12' metal case
-and found that it easily fit all the components. In my 50W design, I'm simply using the case as heat sink. This works well for any power
-you would put out in a normal home and the case get barely luke warm. For higher power levels or listening at a sustained high volume, 
-a dedicated, finned heat sink is probably a better option.
-![Chassis](images/chassis.jpg)
+Mechnical design is not my forte, so you're probably best off to come up with your own design here. I went with a 11' x 10' metal case
+from Nobsound. This proved to be rather small with the beefy 250VA transformer I picked, so wire routing turned out to be a challenge. 
+I used a pair of inexpensive finned aluminum heatsinks from Amazon and they seem to work very well. During casual listening at a moderate
+volume, they stay more or less room temperature. 
+
+![Chassis](images/chassis.png)
 
 
 ## Thermal coupling
-It is *extremely* important that Q7, Q8, Q9, Q10 and Q12 are thermally coupled, i.e. mounted on the same heat sink. Failure to do this 
+It is *extremely* important that Q7, Q9 and Q10 are thermally coupled, i.e. mounted on the same heat sink. Failure to do this 
 may result in thermal runaway and catastrophic damage to the output stage! 
 
 ## Bring-up
@@ -122,52 +110,52 @@ the transistors in the LTP which put DC on the speaker output.
 # Schematic
 ![Schematic](images/schematic.png)
 
-## SPICE simulations
+## Stats
 
 All simulations are done with an 8 ohm resistive dummy load, 1V input at 1kHz.
 
-### THD
-At a fairly moderate quiescent current of 15mA, I get a THD of 0.019%. A THD below 0.1% is considered to be inaudible, so these numbers
-are fine by me. I know there are audiophiles who insist on THD numbers <0.0001%, but I'm not one of them. Inaudible is just fine by me.
+### THD (simulated)
+At a fairly moderate quiescent current of 45mA, I get a THD20k of 0.003% at 10% power. A THD below 0.1% is considered to be inaudible, so these numbers
+are fine by me. I know there are audiophiles who insist on THD numbers <0.0001%, but I'm not one of them. Inaudible is just fine by me. The THD at full
+power (50W) is about 0.1%.
 
-I've gotten suggestions that adding an emitter follower to the VAS might improve THD. I might try that, but I have a feeling there will 
-be more pressing matters than getting the THD even more inaudible. 
+I unfortunately don't have the equipment to accurately measure THD in the lab, but it looks to be considerably below 0.1% (probably below 0.01%).
 
-```Fourier components of V(out)
-DC component:-0.00675533
+```
+Fourier components of V(out)
+DC component:-0.00638947
 
 Harmonic	Frequency	 Fourier 	Normalized	 Phase  	Normalized
  Number 	  [Hz]   	Component	 Component	[degree]	Phase [deg]
-    1   	 1.000e+3	 2.087e+1	 1.000e+0	   90.66°	    0.00°
-    2   	 2.000e+3	 1.490e-3	 7.140e-5	  -77.43°	 -168.10°
-    3   	 3.000e+3	 3.155e-4	 1.512e-5	   38.31°	  -52.35°
-    4   	 4.000e+3	 3.378e-4	 1.619e-5	  106.45°	   15.78°
-    5   	 5.000e+3	 5.623e-4	 2.694e-5	 -129.10°	 -219.76°
-    6   	 6.000e+3	 7.723e-5	 3.700e-6	  129.91°	   39.24°
-    7   	 7.000e+3	 3.638e-4	 1.743e-5	 -163.17°	 -253.83°
-    8   	 8.000e+3	 6.704e-5	 3.213e-6	 -144.07°	 -234.73°
-    9   	 9.000e+3	 3.393e-4	 1.626e-5	 -174.70°	 -265.37°
-   10   	 1.000e+4	 1.427e-4	 6.838e-6	 -141.03°	 -231.69°
-Partial Harmonic Distortion: 0.008339%
-Total Harmonic Distortion:   0.018652%
+    1   	 1.000e+3	 1.137e+1	 1.000e+0	   90.67°	    0.00°
+    2   	 2.000e+3	 2.313e-4	 2.034e-5	  -82.88°	 -173.56°
+    3   	 3.000e+3	 1.539e-4	 1.354e-5	  176.54°	   85.87°
+    4   	 4.000e+3	 1.334e-4	 1.174e-5	  -87.58°	 -178.26°
+    5   	 5.000e+3	 1.239e-5	 1.090e-6	 -166.62°	 -257.29°
+    6   	 6.000e+3	 9.620e-5	 8.462e-6	  -84.00°	 -174.67°
+    7   	 7.000e+3	 5.301e-5	 4.663e-6	    6.49°	  -84.19°
+    8   	 8.000e+3	 6.785e-5	 5.968e-6	  -81.59°	 -172.26°
+    9   	 9.000e+3	 6.897e-5	 6.067e-6	    8.04°	  -82.64°
+   10   	 1.000e+4	 4.481e-5	 3.942e-6	  -78.43°	 -169.11°
+   11   	 1.100e+4	 6.376e-5	 5.608e-6	    9.49°	  -81.19°
+   12   	 1.200e+4	 2.633e-5	 2.316e-6	  -73.92°	 -164.59°
+   13   	 1.300e+4	 5.062e-5	 4.453e-6	   10.82°	  -79.85°
+   14   	 1.400e+4	 1.270e-5	 1.117e-6	  -65.17°	 -155.85°
+   15   	 1.500e+4	 3.641e-5	 3.203e-6	   11.89°	  -78.79°
+   16   	 1.600e+4	 4.245e-6	 3.734e-7	  -33.69°	 -124.37°
+   17   	 1.700e+4	 2.420e-5	 2.129e-6	   12.70°	  -77.97°
+   18   	 1.800e+4	 3.632e-6	 3.195e-7	   53.21°	  -37.47°
+   19   	 1.900e+4	 1.499e-5	 1.318e-6	   12.97°	  -77.70°
+   20   	 2.000e+4	 5.428e-6	 4.775e-7	   75.45°	  -15.22°
+Harmonic Distortion: 0.003150%
 ```
 
 ![FFT](images/fft.png)
 
-### AC Analysis
-The amplifier has a 3dB bandwidth of about 121kHz, which is respectable, while not in the hardcore audiophile range, but it keeps any poles far away from the audible 
+### AC Analysis (measured)
+The amplifier has a 3dB bandwidth of about 250kHz, which is respectable, while not in the hardcore audiophile range, but it keeps any poles far away from the audible 
 range to make both the amplitude and phase response vritually flat where it matters. I am of the opinion that nothing >20kHz has any impact on
 the listening experience.
 
 ![Bode plot](images/bode.png)
-
-### Open Loop Gain and Phase Margin
-The DC open loop gain is about 50dB, giving the global loop about a 27dB feedback level. I understand there are many different theories around this, but the concensus seems
-to be that 20-40dB is an appropriate level. 
-
-The phase margin is about 53 degrees according to simulations, which should be a respectable number and quite stable. It's probably good enough
-that I could lower or completely eliminate the VAS Miller capacitance. But it doesn't affect bandwith much, so for now, I'll keep it around. If you build the amp
-and end up experimenting with the compensation, please let me know what the results were!
-
-![OLG](images/phmargin.png)
 
