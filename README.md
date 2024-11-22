@@ -207,3 +207,8 @@ All capacitor voltages are 50V and all resistor power ratings are 1/4W unless ot
 | C3,C4,C7 | 100n | Rect_L7.2mm_W5.5mm_P5.00mm | 3 | Generic | |
 | D1,D2,D3,D4 | GI754 | D_P600_R-6_P12.70mm | 4 | Mouser | 625-GI754-E3/73 |
 | J1, J2, J3, J4, J5, J6 | Spade connector, male | Pitch 5.08mm, hole 1.4mm | 6 | Generic | |
+
+## Transformer
+| Reference | Value | Footprint | Qty | Vendor| Part No | 
+| --------- | ----- | --------- | ----| ----- | ------- |
+| TR1 | 25V / 250VA | N/A | 1 | Avel Lindberg | Y236652 |
