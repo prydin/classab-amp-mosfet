@@ -8,7 +8,7 @@ and this is my first "serious" attempt at amplifier design. I invite you to buil
 perform like a professionally designed high-end amplifier. That said, I think it sounds pretty darn good. 
 
 ## Background
-This is an updated version of the bipolar Class AB amplifier I designed a while ago that can be found here: https://github.com/prydin/classab-amp-mosfet
+This is an updated version of the bipolar Class AB amplifier I designed a while ago that can be found here: https://github.com/prydin/classab-amp
 I tried to correct some of the mistakes (mostly in the PCB design) and I also wanted to try use MOSFETs for the output stage. I settled on the 
 tried and tested IRFP240/9240 combination. Although not marketed as audio transistors, these devices have found their way into countless amplifier 
 designs, perhaps most notably some of Nelson Pass' First Watt creations. I really like the way they're performing. They seem to run a lot cooler
