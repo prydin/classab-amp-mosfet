@@ -159,3 +159,40 @@ the listening experience.
 
 ![Bode plot](images/bode.png)
 
+# Bill of materials
+| Reference | Value | Vendor | Footprint | Qty | URL | 
+| --------- | ----- | ------ | --------- | --- | --- |
+| C1 | 33uF | Panasonic. Non-polarized | Radial_D4.0mm_P2.00mm | 1 | 
+| C2,C5 | 100pF | Generic | Rect_L7.2mm_W3.0mm_P5.00mm | 2 | |
+| C3,C15,C16 | 100n | TDK | Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2 | 3 | https://www.mouser.com/ProductDetail/871-B32529C1104J |
+
+
+"C4","220u","~","Capacitor_THT:CP_Radial_D8.0mm_P5.00mm","1",""
+"C6,L1","10u","~","-- mixed values --","2",""
+"C7","10n","~","Capacitor_THT:C_Rect_L7.2mm_W3.0mm_P5.00mm_FKS2_FKP2_MKS2_MKP2","1",""
+"C13,C14","4700u","~","Capacitor_THT:CP_Radial_D18.0mm_P7.50mm","2",""
+"D4,D5","1N4148","https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf","Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal","2",""
+"D6,D11","1N5919","~","Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal","2",""
+"D7,D8,D9,D10","1N4004","http://www.vishay.com/docs/88503/1n4001.pdf","Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal","4",""
+"J1","SPEAKER","~","TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal","1",""
+"J2,J4,J5","~","","footprints:Spade Connector","3",""
+"J3","INPUT","~","TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal","1",""
+"Q1,Q2,Q11,Q12,Q15","2N5551","https://www.onsemi.com/pub/Collateral/2N3903-D.PDF","Package_TO_SOT_THT:TO-92_Wide","5",""
+"Q3,Q4,Q16","2N5401","https://www.onsemi.com/pub/Collateral/2N3906-D.PDF","Package_TO_SOT_THT:TO-92_Wide","3",""
+"Q6","BD140","http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf","Package_TO_SOT_THT:TO-126-3_Vertical","1",""
+"Q7,Q8","BD139","http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf","Package_TO_SOT_THT:TO-126-3_Vertical","2",""
+"Q9","IRFP240","https://www.infineon.com/dgdl/irfp4468pbf.pdf?fileId=5546d462533600a40153562c73472019","Package_TO_SOT_THT:TO-247-3_Vertical","1",""
+"Q10","IRFP9240","http://www.irf.com/product-info/datasheets/data/irf9540n.pdf","Package_TO_SOT_THT:TO-247-3_Vertical","1",""
+"R1","150","~","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical","1",""
+"R2,R9","22k","~","-- mixed values --","2",""
+"R3,R4,R5","470","~","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","3",""
+"R6,R11","4.7k","~","-- mixed values --","2",""
+"R7,R19","1k","~","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","2",""
+"R8,R12,R18","330","~","-- mixed values --","3",""
+"R10,R14,R22","100","~","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","3",""
+"R13","10k","~","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","1",""
+"R15","220","~","Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal","1",""
+"R16,R17","0.33","~","Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal","2",""
+"R20,R21","10","~","-- mixed values --","2",""
+"RV1,RV2","300","~","footprints:TRIM_T93YA103KT20","2",""
+
