@@ -174,10 +174,10 @@ All capacitor voltages are 50V and all resistor power ratings are 1/4W unless ot
 | C6 | 10uF | CRadial_D4.0mm_P2.00mm | 1 | Generic | |
 | C7 | 10nF | Rect_L7.2mm_W3.0mm_P5.00mm | 1 | Generic | |
 | C13,C14 | 4700uF | CP_Radial_D18.0mm_P7.50mm | 2 | Mouser | 232-50PK4700MEFC18X4 | 
-| D4,D5 | 1N4148 | DO-35_SOD27_P7.62mm_Horizontal | 2 | Mouser | 512-1N4148 |
-| D6,D11 | 1N5919 |DO-41_SOD81_P10.16mm_Horizontal | 2 | Mouser | 863-1N5919BRLG |
-| D7,D8,D9,D10 | 1N4004 | DO-41_SOD81_P10.16mm_Horizontal | 4 | Mouser | 637-1N4004 | 
-| J1 | Terminal Block | TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal | 1 | Generic |
+| D4,D5 | 1N4148 | DO-35_SOD27_P7.62mm | 2 | Mouser | 512-1N4148 |
+| D6,D11 | 1N5919 |DO-41_SOD81_P10.16mm | 2 | Mouser | 863-1N5919BRLG |
+| D7,D8,D9,D10 | 1N4004 | DO-41_SOD81_P10.16mm | 4 | Mouser | 637-1N4004 | 
+| J1 | Terminal Block | TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm | 1 | Generic |
 | J2,J4,J5 | Spade connector, male | Pitch 5.08mm, hole 1.4mm | 3 | Generic | |
 | J3 | Terminal Block | TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal | 1 | Generic | |
 | Q1,Q2,Q11,Q12,Q15 | 2N5551 | TO-92_Wide | 5 | Mouser | 583-2N5551-T |
