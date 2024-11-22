@@ -25,10 +25,10 @@ MOSFETs on the output.
 ### Input stage
 After the customary DC-blocking capacitor and RF filter, the signal is fed into a long tailed pair differential amplifier that's enhanced to 
 an active current sink and current mirror loads. The active sink and load helps improve both distortion and frequency response. The bias 
-current of the LTP is set to approximately 1.5mA. The LTP and its current mirrors are mounted on a separate copper island for maximum heat
-condudctivity between the transistors. The feedback is fed through a 22k/1k voltage divider, yielding about 23x (27dB) gain. This is a 
-conservative estimate and may have to be adjusted when testing the physical build. The active current sink and load seem to offer a robust
-power supply rejection. 
+current of the LTP is set to approximately 1.5mA. The LTP and its current mirrors are placed closely togethe for maximum heat
+condudctivity between the transistors. If so desired, they can be put into physical contact using a brace or a zip tied.
+The feedback is fed through a 22k/1k voltage divider, yielding about 23x (27dB) gain. This is a conservative estimate and may have to 
+be adjusted when testing the physical build. The active current sink and load seem to offer a robustpower supply rejection. 
 
 ### Voltage amplification/drive stage
 I went for a very simple single-sided design here. I've gotten many suggestions that I should try a dual differential design instead, but 
