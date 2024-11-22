@@ -103,9 +103,10 @@ the transistors in the LTP which put DC on the speaker output.
 11. Connect the speakers and feed a music signal. It it may not sound perfect, since lab supplies aren't designed to power amplifiers, but there should be no severe distortion. 
 13. Hook up the amplifier to the power supply that will be used for the final build. I put 3A fuses in series with each rail.
 14. Measure DC voltage on the speaker outputs. The DC voltage 
-15. Measure the voltage between the emitters on the output transistors (Q10 and Q12). Adjust the bias trim until the voltage reaches 8mV. This corresponds to a bias current of 18mA. You may go higher or lower depending on your preferences. Just watch the temperatures!
-16. Bring up the amplifer and test it using a dummy load and signal generator as described above.
-17. If all has gone well up until this point, connect your speakers and crank up your favorite tune. ENJOY!
+15. Measure the voltage between the emitters on the output transistors (Q9 and Q10). Adjust the bias trim until the voltage reaches 20mV. This corresponds to a bias current of 30mA.
+    Verify that the heat sinks are no warmer than luke warm. You may go higher or lower depending on your preferences. Just watch the temperatures!
+17. Bring up the amplifer and test it using a dummy load and signal generator as described above.
+18. If all has gone well up until this point, connect your speakers and crank up your favorite tune. ENJOY!
 
 # Schematic
 ![Schematic](images/schematic.png)
