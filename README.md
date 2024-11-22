@@ -162,15 +162,18 @@ the listening experience.
 # Bill of materials
 
 All capacitor voltages are 50V and all resistor power ratings are 1/4W unless otherwise indicated. 
+1% tolerance resistors are recommended.
+
+## Amplifier Board (each channel)
 
 | Reference | Value | Footprint | Qty | Vendor| Part No | 
 | --------- | ----- | --------- | ----| ----- | ------- |
-| C1 | 33uF | Radial_D4.0mm_P2.00mm | 1 | Generic | | 
+| C1 | 33uF, non-polarized | Radial_D4.0mm_P2.00mm | 1 | Generic | | 
 | C2,C5 | 100pF | Rect_L7.2mm_W3.0mm_P5.00mm | 2 | Generic | |
 | C4 | 220uF | Radial_D8.0mm_P5.00mm | 1 | Mouser | 871-B32529C1104J |
-| C6 | 10uF | CRadial_D4.0mm_P2.00mm | Generic | |
+| C6 | 10uF | CRadial_D4.0mm_P2.00mm | 1 | Generic | |
 | C7 | 10nF | Rect_L7.2mm_W3.0mm_P5.00mm | 1 | Generic | |
-| C13,C14 | 4700uF | CP_Radial_D18.0mm_P7.50mm | 8 | Mouser | 232-50PK4700MEFC18X4 | 
+| C13,C14 | 4700uF | CP_Radial_D18.0mm_P7.50mm | 2 | Mouser | 232-50PK4700MEFC18X4 | 
 | D4,D5 | 1N4148 | DO-35_SOD27_P7.62mm_Horizontal | 2 | Mouser | 512-1N4148 |
 | D6,D11 | 1N5919 |DO-41_SOD81_P10.16mm_Horizontal | 2 | Mouser | 863-1N5919BRLG |
 | D7,D8,D9,D10 | 1N4004 | DO-41_SOD81_P10.16mm_Horizontal | 4 | Mouser | 637-1N4004 | 
@@ -179,20 +182,28 @@ All capacitor voltages are 50V and all resistor power ratings are 1/4W unless ot
 | J3 | Terminal Block | TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal | 1 | Generic | |
 | Q1,Q2,Q11,Q12,Q15 | 2N5551 | TO-92_Wide | 5 | Mouser | 583-2N5551-T |
 | Q3,Q4,Q16 | 2N5401 | TO-92_Wide | 3 | Mouser | 583-2N5401-F |
-| Q6 | BD140 | TO-126-3_Vertical | 1 | Nouser | 511-BD140-16 |
-"Q7,Q8","BD139","http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf","Package_TO_SOT_THT:TO-126-3_Vertical","2",""
-"Q9","IRFP240","https://www.infineon.com/dgdl/irfp4468pbf.pdf?fileId=5546d462533600a40153562c73472019","Package_TO_SOT_THT:TO-247-3_Vertical","1",""
-"Q10","IRFP9240","http://www.irf.com/product-info/datasheets/data/irf9540n.pdf","Package_TO_SOT_THT:TO-247-3_Vertical","1",""
-"R1","150","~","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical","1",""
-"R2,R9","22k","~","-- mixed values --","2",""
-"R3,R4,R5","470","~","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","3",""
-"R6,R11","4.7k","~","-- mixed values --","2",""
-"R7,R19","1k","~","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","2",""
-"R8,R12,R18","330","~","-- mixed values --","3",""
-"R10,R14,R22","100","~","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","3",""
-"R13","10k","~","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","1",""
-"R15","220","~","Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal","1",""
-"R16,R17","0.33","~","Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal","2",""
-"R20,R21","10","~","-- mixed values --","2",""
-"RV1,RV2","300","~","footprints:TRIM_T93YA103KT20","2",""
+| Q6 | BD140 | TO-126-3_Vertical | 1 | Mouser | 511-BD140-16 |
+| Q7,Q8 | BD139 | TO-126-3_Vertical | 2 | Mouser | 511-BD139-16 |
+| Q9 | IRFP240 | TO-247-3_Vertical | 1 | Mouser | 844-IRFP240PBF |
+| Q10 | IRFP9240 | TO-247-3_Vertical | 1 | Mouser | 844-IRFP9240PBF |
+| R1 | 150 | L6.3mm_D2.5mm_P2.54mm | 1 | Generic | |
+| R2,R9 | 22k | L6.3mm_D2.5mm_P2.54mm | 2 | Generic | | 
+| R3,R4,R5 | 470 | L3.6mm_D1.6mm_P7.62mm | 3 | Generic | |
+| R6,R11 | 4.7k | L3.6mm_D1.6mm_P7.62mm | 2 | Generic | |
+| R7,R19 | 1k | L3.6mm_D1.6mm_P7.62mm | 2 | Generic | |
+| R8,R12,R18 | 330 | L3.6mm_D1.6mm_P7.62mm | 3 | Generic | |
+| R10,R14,R22 | 100 | L3.6mm_D1.6mm_P7.62mm | 3 | Generic | |
+| R13 | 10k | L3.6mm_D1.6mm_P7.62mm | 1 | Generic | |
+| R15 | 220 / 3W | L11.9mm_D4.5mm_P15.24mm | 1 | Mouser | 	603-FMP300JTF73-220R |
+| R16,R17 | 0.33 / 3W | L11.9mm_D4.5mm_P15.24mm | 2 | Mouser | 71-PAC300003307FAC00 |
+| R20,R21 | 10 / 3W | L11.9mm_D4.5mm_P15.24mm | 2 | Mouser | EP3WSS10RJ | 
+| RV1,RV2 | 300 | TRIM_T93YA103KT20 | 2 | Amazon | https://www.amazon.com/BOJACK-Multiturn-Trimmer-Potentiometer-Assortment/dp/B07WDCVGJV |
 
+## Rectifier board
+
+| Reference | Value | Footprint | Qty | Vendor| Part No | 
+| --------- | ----- | --------- | ----| ----- | ------- |
+| C1,C2,C5,C6 | 4700uF | CP_Radial_D18.0mm_P7.50mm | 4 | Mouser | 232-50PK4700MEFC18X4 | 
+| C3,C4,C7 | 100n | Rect_L7.2mm_W5.5mm_P5.00mm | 3 | Generic | |
+| D1,D2,D3,D4 | GI754 | D_P600_R-6_P12.70mm | 4 | Mouser | 625-GI754-E3/73 |
+| J1, J2, J3, J4, J5, J6 | Spade connector, male | Pitch 5.08mm, hole 1.4mm | 6 | Generic | |
