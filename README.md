@@ -8,7 +8,7 @@ and this is my first "serious" attempt at amplifier design. I invite you to buil
 perform like a professionally designed high-end amplifier. That said, I think it sounds pretty darn good. 
 
 ## Background
-This is an updated version of the bipolar Class AB amplifier I designed a while ago that can be found here: https://github.com/prydin/classab-amp-mosfet
+This is an updated version of the bipolar Class AB amplifier I designed a while ago that can be found here: https://github.com/prydin/classab-amp
 I tried to correct some of the mistakes (mostly in the PCB design) and I also wanted to try use MOSFETs for the output stage. I settled on the 
 tried and tested IRFP240/9240 combination. Although not marketed as audio transistors, these devices have found their way into countless amplifier 
 designs, perhaps most notably some of Nelson Pass' First Watt creations. I really like the way they're performing. They seem to run a lot cooler
@@ -76,15 +76,17 @@ originally built, so you may have to tweak this if you experience hum. The proto
 ## Mechanincal design
 Mechnical design is not my forte, so you're probably best off to come up with your own design here. I went with a 11' x 10' metal case
 from Nobsound. This proved to be rather small with the beefy 250VA transformer I picked, so wire routing turned out to be a challenge. 
-I used a pair of inexpensive finned aluminum heatsinks from Amazon and they seem to work very well. During casual listening at a moderate
-volume, they stay more or less room temperature. 
+I wouldn't be offended if you called it a rat's nest. I used a pair of inexpensive finned aluminum heatsinks from Amazon and they seem to 
+work very well. During casual listening at a moderate volume, they stay more or less room temperature. 
 
 ![Chassis](images/chassis.png)
-
 
 ## Thermal coupling
 It is *extremely* important that Q7, Q9 and Q10 are thermally coupled, i.e. mounted on the same heat sink. Failure to do this 
 may result in thermal runaway and catastrophic damage to the output stage! 
+
+You may also want to thermally couple the two transistor pairs in the input stage (R1 and R2, and R3 and R4 respectively). I just 
+wrapped a piece if ziptie around them to make them touch. 
 
 ## Bring-up
 This is the procedure I followed when bringing it up the first time. It saved me on the first bring-up since I had accidentally mixed up 
@@ -102,7 +104,7 @@ the transistors in the LTP which put DC on the speaker output.
 10. Increase the current limit to 1A and try a 300mV p/p input.
 11. Connect the speakers and feed a music signal. It it may not sound perfect, since lab supplies aren't designed to power amplifiers, but there should be no severe distortion. 
 13. Hook up the amplifier to the power supply that will be used for the final build. I put 3A fuses in series with each rail.
-14. Measure DC voltage on the speaker outputs. The DC voltage 
+14. Measure DC voltage on the speaker outputs. The DC voltage should not exceed 50mV. 
 15. Measure the voltage between the emitters on the output transistors (Q9 and Q10). Adjust the bias trim until the voltage reaches 20mV. This corresponds to a bias current of 30mA.
     Verify that the heat sinks are no warmer than luke warm. You may go higher or lower depending on your preferences. Just watch the temperatures!
 17. Bring up the amplifer and test it using a dummy load and signal generator as described above.
@@ -172,7 +174,7 @@ All capacitor voltages are 50V and all resistor power ratings are 1/4W unless ot
 | C1 | 33uF, non-polarized | Radial_D4.0mm_P2.00mm | 1 | Generic | | 
 | C2,C5 | 100pF | Rect_L7.2mm_W3.0mm_P5.00mm | 2 | Generic | |
 | C4 | 220uF | Radial_D8.0mm_P5.00mm | 1 | Mouser | 871-B32529C1104J |
-| C6 | 10uF | CRadial_D4.0mm_P2.00mm | 1 | Generic | |
+| C6 | 10uF | CRadial_D4.0mm_P2.00mm | 1 | Mouser | 710-860240672002 |
 | C7 | 10nF | Rect_L7.2mm_W3.0mm_P5.00mm | 1 | Generic | |
 | C13,C14 | 4700uF | CP_Radial_D18.0mm_P7.50mm | 2 | Mouser | 232-50PK4700MEFC18X4 | 
 | D4,D5 | 1N4148 | DO-35_SOD27_P7.62mm | 2 | Mouser | 512-1N4148 |
@@ -187,12 +189,12 @@ All capacitor voltages are 50V and all resistor power ratings are 1/4W unless ot
 | Q7,Q8 | BD139 | TO-126-3_Vertical | 2 | Mouser | 511-BD139-16 |
 | Q9 | IRFP240 | TO-247-3_Vertical | 1 | Mouser | 844-IRFP240PBF |
 | Q10 | IRFP9240 | TO-247-3_Vertical | 1 | Mouser | 844-IRFP9240PBF |
-| R1 | 150 | L6.3mm_D2.5mm_P2.54mm | 1 | Generic | |
-| R2,R9 | 22k | L6.3mm_D2.5mm_P2.54mm | 2 | Generic | | 
-| R3,R4,R5 | 470 | L3.6mm_D1.6mm_P7.62mm | 3 | Generic | |
-| R6,R11 | 4.7k | L3.6mm_D1.6mm_P7.62mm | 2 | Generic | |
-| R7,R19 | 1k | L3.6mm_D1.6mm_P7.62mm | 2 | Generic | |
-| R8,R12,R18 | 330 | L3.6mm_D1.6mm_P7.62mm | 3 | Generic | |
+| R1 | 150 | L6.3mm_D2.5mm_P2.54mm | 1 | Mouser | 660-MF1/4LCT52R151J |
+| R2,R9 | 22k | L6.3mm_D2.5mm_P2.54mm | 2 | Mouser | MFR-25FTE52-22K | 
+| R3,R4,R5 | 470 | L3.6mm_D1.6mm_P7.62mm | 3 | Mouser | 660-MF1/4DCT52R4700F |
+| R6,R11 | 4.7k | L3.6mm_D1.6mm_P7.62mm | 2 | Mouser | 660-MF1/4LCT52R472G |
+| R7,R19 | 1k | L3.6mm_D1.6mm_P7.62mm | 2 | Mouser | 279-LR0204F1K0 |
+| R8,R12,R18 | 330 | L3.6mm_D1.6mm_P7.62mm | 3 | Mouser | 660-MF1/4LCT52R331J |
 | R10,R14,R22 | 100 | L3.6mm_D1.6mm_P7.62mm | 3 | Generic | |
 | R13 | 10k | L3.6mm_D1.6mm_P7.62mm | 1 | Generic | |
 | R15 | 220 / 3W | L11.9mm_D4.5mm_P15.24mm | 1 | Mouser | 	603-FMP300JTF73-220R |
@@ -213,3 +215,8 @@ All capacitor voltages are 50V and all resistor power ratings are 1/4W unless ot
 | Reference | Value | Footprint | Qty | Vendor| Part No | 
 | --------- | ----- | --------- | ----| ----- | ------- |
 | TR1 | 25V / 250VA | N/A | 1 | Avel Lindberg | Y236652 |
+
+## Case and hardware 
+* Case: https://www.aliexpress.us/item/3256807449187155.html?src=google&gatewayAdapt=glo2usa
+* Heatsink: https://www.amazon.com/Awxlumv-Aluminum-60x150x25mm-2-36x5-91x0-98-Amplifier/dp/B07VDHQDQT
+
