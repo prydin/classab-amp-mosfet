@@ -62,6 +62,9 @@ The amplifier is intended to be powered by an unregulated linear power supply li
 is fitted with 4700uF on each rail, per channel and the rectifier board has an additional 9400uF on each rail. In simulations, measurements 
 and listening tests, this seems sufficient. 
 
+The amplifier has been tested with rail voltages ranging from +-24V to +-37V with good results. Obviously, higher output power requires more voltage. 
+The recommended supply voltage range is +-24V to +-40V. 
+
 In my build, I'm using a 2x25V toroidial transformer. Where I live, this ended up giving me 2x39V rectified voltage, which is a bit overkill for
 50W, but some extra headroom is never a bad thing.
 
