@@ -217,6 +217,6 @@ All capacitor voltages are 50V and all resistor power ratings are 1/4W unless ot
 | TR1 | 25V / 250VA | N/A | 1 | Avel Lindberg | Y236652 |
 
 ## Case and hardware 
-Case: https://www.aliexpress.us/item/3256807449187155.html?src=google&gatewayAdapt=glo2usa
-Heatsink: https://www.amazon.com/Awxlumv-Aluminum-60x150x25mm-2-36x5-91x0-98-Amplifier/dp/B07VDHQDQT
+* Case: https://www.aliexpress.us/item/3256807449187155.html?src=google&gatewayAdapt=glo2usa
+* Heatsink: https://www.amazon.com/Awxlumv-Aluminum-60x150x25mm-2-36x5-91x0-98-Amplifier/dp/B07VDHQDQT
 
