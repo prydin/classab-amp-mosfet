@@ -3,7 +3,7 @@
 ![3D rendering](images/3d.png)
 
 ## Disclaimer
-This amplifier has been built and testad and, at least subjectively speaking, sounds great. However, I'm not a professional designer
+This amplifier has been built and tested and, at least subjectively speaking, sounds great. However, I'm not a professional designer
 and this is my first "serious" attempt at amplifier design. I invite you to build this amplifier if you like, but don't expect it to
 perform like a professionally designed high-end amplifier. That said, I think it sounds pretty darn good. 
 
