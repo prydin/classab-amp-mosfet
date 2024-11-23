@@ -5311,7 +5311,7 @@
 	)
 	(text "Wrap 16-18 AWG wire 10-12 turns around R21"
 		(exclude_from_sim no)
-		(at 224.028 71.12 0)
+		(at 244.348 73.914 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5368,6 +5368,26 @@
 			)
 		)
 		(uuid "4205b53a-b977-4d0c-90a7-9615af9adf07")
+	)
+	(text "-24V - -40V"
+		(exclude_from_sim no)
+		(at 216.154 143.764 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6b2b10a9-f9a4-4c32-9210-f2e4a17bd19b")
+	)
+	(text "24V - 40V"
+		(exclude_from_sim no)
+		(at 216.662 32.004 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8bc9c263-3910-4109-b9c3-25160ff3b353")
 	)
 	(text "3W"
 		(exclude_from_sim no)
