@@ -121,7 +121,7 @@ the transistors in the LTP which put DC on the speaker output.
 All simulations are done with an 8 ohm resistive dummy load, 1V input at 1kHz.
 
 ### THD (simulated)
-At a fairly moderate quiescent current of 45mA, I get a THD20k of 0.003% at 10% power. A THD below 0.1% is considered to be inaudible, so these numbers
+At a fairly moderate quiescent current of 45mA, I get a THD20k of 0.003% at 30% power. A THD below 0.1% is considered to be inaudible, so these numbers
 are fine by me. I know there are audiophiles who insist on THD numbers <0.0001%, but I'm not one of them. Inaudible is just fine by me. The THD at full
 power (50W) is about 0.1%.
 
