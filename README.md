@@ -3,7 +3,7 @@
 ![3D rendering](images/3d.png)
 
 ## Disclaimer
-This amplifier has been built and testad and, at least subjectively speaking, sounds great. However, I'm not a professional designer
+This amplifier has been built and tested and, at least subjectively speaking, sounds great. However, I'm not a professional designer
 and this is my first "serious" attempt at amplifier design. I invite you to build this amplifier if you like, but don't expect it to
 perform like a professionally designed high-end amplifier. That said, I think it sounds pretty darn good. 
 
@@ -62,6 +62,9 @@ The amplifier is intended to be powered by an unregulated linear power supply li
 is fitted with 4700uF on each rail, per channel and the rectifier board has an additional 9400uF on each rail. In simulations, measurements 
 and listening tests, this seems sufficient. 
 
+The amplifier has been tested with rail voltages ranging from +-24V to +-37V with good results. Obviously, higher output power requires more voltage. 
+The recommended supply voltage range is +-24V to +-40V. 
+
 In my build, I'm using a 2x25V toroidial transformer. Where I live, this ended up giving me 2x39V rectified voltage, which is a bit overkill for
 50W, but some extra headroom is never a bad thing.
 
@@ -118,7 +121,7 @@ the transistors in the LTP which put DC on the speaker output.
 All simulations are done with an 8 ohm resistive dummy load, 1V input at 1kHz.
 
 ### THD (simulated)
-At a fairly moderate quiescent current of 45mA, I get a THD20k of 0.003% at 10% power. A THD below 0.1% is considered to be inaudible, so these numbers
+At a fairly moderate quiescent current of 45mA, I get a THD20k of 0.003% at 30% power. A THD below 0.1% is considered to be inaudible, so these numbers
 are fine by me. I know there are audiophiles who insist on THD numbers <0.0001%, but I'm not one of them. Inaudible is just fine by me. The THD at full
 power (50W) is about 0.1%.
 
