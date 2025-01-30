@@ -3371,12 +3371,6 @@
 		(uuid "a1ec2c1b-9b2b-4a4f-aee4-2dacc6dd6622")
 	)
 	(junction
-		(at 142.24 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a42bd39c-a0ee-450e-b64f-fb342a8233e5")
-	)
-	(junction
 		(at 82.55 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3423,6 +3417,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c22ad509-e4eb-467a-9f05-4239354f2f59")
+	)
+	(junction
+		(at 142.24 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c852336d-cccd-4e23-87dd-66c7645399e5")
 	)
 	(junction
 		(at 50.8 92.71)
@@ -6946,6 +6946,81 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:BD139")
+		(at 139.7 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "448c69e8-1478-4df2-a482-17b677480a31")
+		(property "Reference" "Q8"
+			(at 144.272 126.238 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BD139"
+			(at 144.272 128.778 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 144.78 132.715 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf"
+			(at 139.7 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126"
+			(at 139.7 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0954f7c7-6ec0-4c64-95cc-c5cd9a43cabc")
+		)
+		(pin "3"
+			(uuid "cf30475c-c836-4b8c-abef-68e4a7688ff6")
+		)
+		(pin "2"
+			(uuid "af1d8f73-1c8c-4c45-aa65-3c509fcac44a")
+		)
+		(instances
+			(project "classab-amp"
+				(path "/856f1e14-388c-4d87-abe9-3c0c6310ec29"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 233.68 99.06 0)
 		(unit 1)
@@ -9960,6 +10035,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:BD140")
+		(at 139.7 48.26 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b725a33b-4af6-4b74-9ae5-6f463ff35c24")
+		(property "Reference" "Q16"
+			(at 144.78 49.5301 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BD140"
+			(at 144.78 46.9901 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
+			(at 144.78 46.355 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf"
+			(at 139.7 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126"
+			(at 139.7 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81f7570e-b561-4b23-8f69-8f2239df3a51")
+		)
+		(pin "3"
+			(uuid "b8a05628-2bb6-4089-95a5-ef500e0dadbb")
+		)
+		(pin "2"
+			(uuid "6c90c2e5-876d-4503-9e04-0231dda331f3")
+		)
+		(instances
+			(project "classab-amp"
+				(path "/856f1e14-388c-4d87-abe9-3c0c6310ec29"
+					(reference "Q16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 33.02 85.09 90)
 		(unit 1)
@@ -10021,81 +10172,6 @@
 			(project ""
 				(path "/856f1e14-388c-4d87-abe9-3c0c6310ec29"
 					(reference "#FLG02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Custom:2N5551")
-		(at 139.7 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b8e23898-efc5-4c0a-b5de-aae97350ad80")
-		(property "Reference" "Q8"
-			(at 144.78 129.5399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N5551"
-			(at 144.78 132.0799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Wide"
-			(at 144.78 132.715 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF"
-			(at 139.7 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92"
-			(at 139.7 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "aa4ff2bd-f931-4679-ba0e-2f8269feb46e")
-		)
-		(pin "1"
-			(uuid "deb0f04d-b8d1-48ea-974b-52c567f4f2cc")
-		)
-		(pin "2"
-			(uuid "42ce10e0-dcf5-4b28-8ee7-4025e6a576d0")
-		)
-		(instances
-			(project "classab-amp"
-				(path "/856f1e14-388c-4d87-abe9-3c0c6310ec29"
-					(reference "Q8")
 					(unit 1)
 				)
 			)
@@ -10386,83 +10462,6 @@
 			(project "classab-amp"
 				(path "/856f1e14-388c-4d87-abe9-3c0c6310ec29"
 					(reference "R15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Custom:2N5401")
-		(at 139.7 48.26 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c3b217b1-7451-45fa-b8bd-8bbe9f570951")
-		(property "Reference" "Q16"
-			(at 144.78 46.9899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N5401"
-			(at 144.78 49.5299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Wide"
-			(at 144.78 46.355 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/2N3906-D.PDF"
-			(at 139.7 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "-0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92"
-			(at 139.7 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "b34a4baf-1b19-4763-8ac2-c6868e728fc8")
-		)
-		(pin "1"
-			(uuid "7fa6f975-181d-4341-bd9c-0f58f831f828")
-		)
-		(pin "2"
-			(uuid "c5b52b26-d19c-4ddb-a5cd-f7e9de6471ce")
-		)
-		(instances
-			(project ""
-				(path "/856f1e14-388c-4d87-abe9-3c0c6310ec29"
-					(reference "Q16")
 					(unit 1)
 				)
 			)
